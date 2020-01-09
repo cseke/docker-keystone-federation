@@ -1,6 +1,6 @@
 FROM azul/zulu-openjdk:8
 
-EXPOSE 443 8443 80
+EXPOSE 443 80
 
 RUN mkdir /dists
 WORKDIR dists

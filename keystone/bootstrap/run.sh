@@ -3,10 +3,9 @@
 /usr/bin/memcached -u root & >/dev/null || true
 sed -i 's/host_name/'"$HOST_NAME"'/' /etc/keystone/keystone.conf
     sed -i 's/{host_name}/'"$HOST_NAME"'/' /home/keystone/bootstrap/mysql/keystone.sql
-    sed -i 's/admin_port_id/'"$ADMIN_PORT"'/' /etc/apache2/sites-available/keystone.conf
     sed -i 's/port_id/'"$KEYSTONE_PORT"'/' /etc/apache2/sites-available/keystone.conf
+    sed -i 's/keystone_port/'"$KEYSTONE_PORT"'/'  /home/keystone/bootstrap/keystone/openrcs/openrc.sh
     sed -i 's/keystone_url/'"$HOST_NAME"'/'  /home/keystone/bootstrap/keystone/openrcs/openrc.sh
-    sed -i 's/admin_port_id/'"$ADMIN_PORT"'/'  /home/keystone/bootstrap/keystone/openrcs/openrc.sh
     sed -i 's/keystone_port/'"$KEYSTONE_PORT"'/'  /home/keystone/bootstrap/keystone/openrcs/openrc_federated.sh
     sed -i 's/keystone_url/'"$HOST_NAME"'/'  /home/keystone/bootstrap/keystone/openrcs/openrc_federated.sh
     sed -i 's/keystone_port/'"$KEYSTONE_PORT"'/'  /etc/shibboleth/shibboleth2.xml
@@ -36,7 +35,7 @@ then
           --bootstrap-role-name admin \
           --bootstrap-service-name $HOST_NAME \
           --bootstrap-region-id $REGION \
-          --bootstrap-admin-url http://$HOST_NAME:$ADMIN_PORT \
+          --bootstrap-admin-url http://$HOST_NAME:$KEYSTONE_PORT \
           --bootstrap-public-url http://$HOST_NAME:$KEYSTONE_PORT \
           --bootstrap-internal-url http://$HOST_NAME:$KEYSTONE_PORT
 

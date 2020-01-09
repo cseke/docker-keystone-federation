@@ -24,7 +24,7 @@
           helpLocation="/about.html"
           styleSheet="/shibboleth-sp/main.css"/>
 
-      <MetadataProvider type="XML" uri="https://idp/idp/shibboleth"
+      <MetadataProvider type="XML" uri="http://idp/idp/shibboleth"
          backingFilePath="/etc/shibboleth/idp.xml"
         reloadInterval="7200"/>
 

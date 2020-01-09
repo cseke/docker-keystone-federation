@@ -1,31 +1,31 @@
 [
-	{
-		"remote": [
-			{
-				"type": "cn"
-			},
-			{
-				"type": "mail"
-			}
-		],
-		"local": [
-			{
-				"group": {
-					"name": "federated_users",
-					"domain": {
-						"name": "Default"
-					}
-				}
-			},
+ {
+  "remote": [
+   {
+    "type": "cn"
+   },
+   {
+    "type": "mail"
+   }
+  ],
+  "local": [
+   {
+    "group": {
+     "name": "federated_users",
+     "domain": {
+      "name": "Default"
+     }
+    }
+   },
 
-			{
-				"user": {
-					"name":  "{0}",
-					"email": "{1}"
-				}
-			}
+   {
+    "user": {
+     "name":  "{0}",
+     "email": "{1}"
+    }
+   }
 
-		]
-	}
+  ]
+ }
 
 ]
